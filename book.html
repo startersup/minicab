@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Birmingham Airport Taxis</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="./assets/css/style.css">
+ <link rel="stylesheet" href="./assets/css/media.css">
+<link rel="stylesheet" href="./assets/css/fonts.css">
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet" />
+</head>
+    <body>
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+<a class="navbar-brand">Birmingham <span>Taxis</span></a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li><a href="#">Home</a></li>
+       <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="true">Services <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Airport Transfers</a></li>
+            <li><a href="#">Train Station Transfers</a></li>
+              <li><a href="#">Cruise Station Transfers</a></li>
+              <li><a href="#">School Transfers</a></li>
+              <li><a href="#">Corporate Bookings</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Airports</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#"> Signup</a></li>
+        <li><a href="#"> Login</a></li>
+      </ul>
+    </div>
+  </div>
+</nav><br><br>
+
+ <!--mainsection-->
+ <div class="info container bookit">
+        <div class="row">
+            <div class="col-md-7">
+                   <div class="quoter backcolor"> <h3 class="text-secondary">Journey Information</h3><hr></div>
+                   <div class="quoter infotab">
+                       <div class="row">
+               <div class="col-md-6 ">
+                   <label>Passenger Name:</label>
+                   <input type="text" class="controls" placeholder="Enter Passenger Name">
+                       </div>
+                               <div class="col-md-6">
+                   <label >Passenger  Email:</label>
+                   <input type="text" class="controls"  placeholder="Enter Passenger Email" >
+                       </div></div> 
+                        <div class="row">
+                             <div class="col-md-6 ">
+                   <label >Contact Number:</label>
+                   <input type="text" class="controls" placeholder="Enter Passenger Contact" value="+44">
+                       </div>
+                            <div class="col-md-6 ">
+                   <label >Alternate Number:</label>
+                   <input type="text" class="controls"  placeholder="Enter Alternate Contact" value="+44">
+                            </div></div>
+                           <div class="row">
+                             <div class="col-md-6">
+                   <label >Pickup Full Address:</label>
+                   <input type="text" class="controls"  placeholder="Eg:Building Number, Flat No"  >
+                       </div>
+                            <div class="col-md-6">
+                   <label >Dropoff Full Address:</label>
+                   <input type="text" class="controls" placeholder="Eg:Building Number, Flat No" >
+                            </div></div>
+                           
+                             <div class="row">
+                             <div class="col-md-6">
+                   <label >Meet & Greet(£10.00):</label>
+                   <select  class="select selectit controls">
+               <option value="1">No I don't Need </option>
+               <option value="2">Yes I Need Meet & Greet.</option>
+             </select>
+                       </div>
+                            <div class="col-md-6 ">
+                   <label >Child Seat(£5.00 each):</label>
+                   <select  class="select selectit controls">
+               <option value="1">No I don't Need </option>
+               <option value="2">Yes I Need Meet & Greet.</option>
+             </select>
+                            </div></div>
+                                 <div class="row">
+                                       <div class="col-md-12"><br>
+                                 <label >Special information to us (optional):</label>
+                                   <textarea class="select controls textarea" rows="8" id="comment"></textarea>
+                                     </div></div>
+                       <div class="row">
+                             <div class="col-md-6 ">
+                   <label >Flight Details:</label>
+                   <input type="text" class="controls"  placeholder="Eg: B789" >
+                       </div>
+                            <div class="col-md-6 ">
+                   <label >Payment Mode:</label>
+             <select class="select selectit controls" >
+               <option value="1">Debit / Credit Card (3% Admin Charges)</option>
+               <option value="2">Paypal Transaction(5% Card Charges)</option>
+               <option value="3">Cash on Ride (Deposit Required)</option>
+             </select>
+                            </div></div>
+                           <div class="row container1 ">
+                             <div class="col-md-8 col-xs-7">
+      <input id="origin-input" class="controls left" type="text" placeholder="Enter Promocode" name="open" required=""></div>
+                             <div class="col-md-4 col-xs-5"> <button class="buttonquote">Apply Promo</button></div>
+      </div>
+                      <div class="checkbox">
+             <label><input type="checkbox" value=""> I Agree the <a href="index.html">Terms and Conditions</a> mentioned </label>
+           </div><br>
+                    <center> <button class="buttonquote">Book it Now</button></center>   
+        
+
+            </div>
+        </div>
+        <div class="col-md-5">
+               <div class="quoter backcolor"><h3 class="text-secondary">Details Provided</h3></div>
+                    <div class="quoter infotab">
+                   <table>
+         <tr>
+           <td>Pickup From:</td>
+           <td>Gatwick Airport North Terminal Approach </td>
+         </tr>
+         <tr>
+           <td>Dropoff To:</td>
+           <td>Heathrow Airport Terminal 5</td>
+         </tr>
+         <tr>
+           <td>Passengers:</td>
+           <td>1</td>
+         </tr>
+         <tr>
+           <td>Luggages:</td>
+           <td>1</td>
+         </tr>
+           <tr>
+           <td>Cab Type:</td>
+           <td>Saloon x 1</td>
+         </tr>            
+         <tr>
+           <td>Date & Time:</td>
+           <td>11/10/2018 12:30</td>
+         </tr>
+         <tr>
+           <td>Total Fare:</td>
+           <td>£50.00</td>
+         </tr>
+       </table>                
+             </div>
+             <div class="quoter backcolor"><h3 class="text-secondary">Booking Note</h3></div>
+             <div class="quoter infotab">
+                 <ul>
+                <li> <p>All Bookings made in the website needs further confirmation through email by <b>tapping the button </b>on your booking information Email, which will be automatically sent when you booked a Cab.</p></li>
+                <li> <p> Bookings made with Cash on Ride requires <b>minimum 10% Deposit </b>as the booking confirmation fails to pay deposit leads to cancellation of booking.</p></li>
+                <li> <p> In case of any cancellation of the booking should be made<b> before 24 hours of the journey </b>fails to do leads to Admin charges and refund the Balance ( applicable for paid Bookings).
+                    </p></li></ul>
+             </div>
+             <div class="quoter backcolor"><h3 class="text-secondary">Need any help?</h3></div>
+             <div class="quoter infotab">
+                   <ul>
+                           <li> <p><b>For Bookings: </b>+44 01293344804</p></li>
+                           <li> <p><b>For instant Reply:</b> Initiate Live Chat</p></li>
+                           <li> <p><b>For Complaints:</b> complaints@minicabee.co.uk</p></li>
+                 </ul>
+             </div>
+               </div>
+          
+               </div>
+        <br><br>
+        </div>
+ <!--mainsection-->
+<footer class="footer">
+<div class="container">
+ <div class="row ">
+<div class="col-md-3 col-sm-6 hidden-xs">
+ <h5>Locations</h5>
+     <ul>  
+            <li><a href="#">Heathrow Taxi</a></li>
+        <li><a href="#">Gatwick Taxi</a></li>
+        <li><a href="#">Birmingham Taxi</a></li>
+        <li><a href="#">Liverpool Taxi</a></li>
+        <li><a href="#">Manchester Taxi</a></li>
+        <li><a href="#">London Taxi</a></li>
+        <li><a href="#">Cardiff Taxi</a></li>
+        <li><a href="#">Norwich Taxi</a></li>
+        <li><a href="#">Lincoln Taxi</a></li>
+        <li><a href="#">Plymouth Taxi</a></li>
+        <li><a href="#">Guildford Taxi</a></li>
+        <li><a href="#">Doncaster Taxi</a></li>
+        <li><a hrf="">Leicestershire Taxi</a></li>
+        <li><a hrf="">Aberdeen Taxi</a></li>
+        <li><a hrf="">Sheffield Taxi</a></li>
+        <li><a hrf="">Oxford Taxi</a></li>
+    </ul>
+</div>
+     <div class="col-md-3 col-sm-6 col-xs-6 hidden-xs">
+ <h5>Airports</h5>
+      <ul>  
+            <li><a href="#">Heathrow Airport Taxi</a></li>
+        <li><a href="#">Gatwick Airport Taxi</a></li>
+        <li><a href="#">Birmingham Airport Taxi</a></li>
+        <li><a href="#">London Airport Taxi</a></li>
+        <li><a href="#">Stansted Airport Taxi</a></li>
+        <li><a href="#">Luton Airport Taxi</a></li>
+        <li><a href="#">London City Airport Taxi</a></li>
+        <li><a href="#">Manchester Airport Taxi</a></li>
+        <li><a href="#">Edinburgh Airport Taxi</a></li>
+        <li><a href="#">Glasgow Airport Taxi</a></li>
+        <li><a href="#">Birmingham Airport Taxi</a></li>
+        <li><a href="#">Liverpool Airport Taxi</a></li>
+    </ul>
+</div>
+<div class="col-md-3 col-sm-6 col-xs-6">
+ <h5>Services</h5>
+     <ul class="aligner">
+            <li><a href="#">Airport Transfers</a></li>
+            <li><a href="#">Train Station Transfers</a></li>
+              <li><a href="#">Cruise Station Transfers</a></li>
+              <li><a href="#">School Transfers</a></li>
+              <li><a href="#">Corporate Bookings</a></li>
+          </ul>
+</div>
+
+<div class="col-md-3 col-sm-6 col-xs-6">
+ <h5>Company</h5>
+     <ul>  
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Locations</a></li>
+        <li><a href="#">Discounts</a></li>
+        <li><a href="#">Book a Ride</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Terms & Conditions</a></li>
+    </ul>
+</div>
+</div></div></footer>
+    <footer class="footmain">
+   <center> <p>Copyrights &copy 2019 Birmingham Airport Taxis.<span class="hidden-xs"> All Rights Reserved</span></p>
+        <h5>Powered by<span> Minicabee Travel Solutions</span></h5>
+        </center>
+        </footer>
+<script>
+$(document).ready(function(){
+  $('[data-toggle="tooltip"]').tooltip();   
+});
+</script>
+<script>
+
+      function initMap() {
+        var myLatLng = {lat: -25.363, lng: 131.044};
+
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 4,
+          center: myLatLng
+        });
+
+        var marker = new google.maps.Marker({
+          position: myLatLng,
+          map: map,
+          title: 'Hello World!'
+        });
+      }
+    </script>
+
+   
+       <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCV_e29ZNv8f0S3-2IzNwIPqc-ycslxNBE&callback=initMap"></script>
+</body>
+</html>

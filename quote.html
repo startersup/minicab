@@ -52,19 +52,83 @@
 <div class="col-md-7 col-sm-6 nopadding">
 <div class="quote">
     <h1>Fare Estimator</h1>
+    <br>
 <ul class="nav nav-pills">
-    <li><a data-toggle="pill" href="#home"><img class="smallimg" src="./assets/images/saloon.png"><br>saloon Car</a></li>
-    <li><a data-toggle="pill" href="#menu1"><img class="smallimg" src="./assets/images/estate.png"><br>Estate Car</a></li>
-    <li><a data-toggle="pill" href="#menu2"><img class="smallimg" src="./assets/images/suv.png"></a><br>MPV Car</li>
-    <li><a data-toggle="pill" href="#menu3"><img class="smallimg" src="./assets/images/mpv.png"></a></a></li>
+    <li><a data-toggle="pill" href="#home"><img data-toggle="tooltip" title="saloon car" class="smallimg" src="./assets/images/saloon.png"></a></li>
+    <li><a data-toggle="pill" href="#menu1"><img data-toggle="tooltip" title="Estate Car" class="smallimg" src="./assets/images/estate.png"></a></li>
+    <li><a data-toggle="pill" href="#menu2"><img data-toggle="tooltip" title="MPV Car" class="smallimg" src="./assets/images/suv.png"></a></li>
+    <li><a data-toggle="pill" href="#menu3"><img data-toggle="tooltip" title="7-9 Seater" class="smallimg" src="./assets/images/mpv.png"></a></li>
   </ul>
  <div class="tab-content">
     <div id="home" class="tab-pane fade in active">
-     <h3>Saloon Car</h3>
+   <table style="width:100%" class="fare">
+  <tr>
+    <th style="width:80%">Taxi Provider List</th>
+    <th style="width:20%">Fare</th>
+  </tr>
+       <br>
+  <tr data-toggle="collapse" data-target="#demo">
+    <td>Britannia Cars<br><small><img src="./assets/images/5star.PNG"> ( 21 Reviews )</small></td>
+    <td>£56</td>
+
+  </tr>
+    
+  <tr>
+    <td >Atlas Cars Lts<br><small><img src="./assets/images/4star.PNG">( 13 Reviews )</small> </td>
+    <td >£67</td>
+  </tr>
+      <tr>
+    <td >Atlas Cars Lts<br><small><img src="./assets/images/4star.PNG">( 13 Reviews )</small> </td>
+    <td >£67</td>
+  </tr>
+         <tr>
+    <td >Pickme Cars Lts<br><small><img src="./assets/images/3star.PNG">( 13 Reviews )</small> </td>
+    <td >£67</td>
+  </tr>
+         <tr>
+    <td >Stanley Cars Lts<br><small><img src="./assets/images/3star.PNG">( 13 Reviews )</small> </td>
+    <td >£67</td>
+  </tr>
+         <tr>
+    <td >Atlas Cars Lts<br><small><img src="./assets/images/4star.PNG">( 13 Reviews )</small> </td>
+    <td >£67</td>
+  </tr>
+</table>
     </div>
     <div id="menu1" class="tab-pane fade">
-      <h3>Menu 1</h3>
-      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        <table style="width:100%" class="fare">
+  <tr>
+    <th style="width:80%">Taxi Provider List</th>
+    <th style="width:20%">Fare</th>
+  </tr>
+       <br>
+  <tr data-toggle="collapse" data-target="#demo">
+    <td>Britannia Cars<br><small><img src="./assets/images/5star.PNG"> ( 21 Reviews )</small></td>
+    <td>£86</td>
+
+  </tr>
+    
+  <tr>
+    <td >Atlas Cars Lts<br><small><img src="./assets/images/4star.PNG">( 13 Reviews )</small> </td>
+    <td >£98</td>
+  </tr>
+      <tr>
+    <td >Atlas Cars Lts<br><small><img src="./assets/images/4star.PNG">( 13 Reviews )</small> </td>
+    <td >£101</td>
+  </tr>
+         <tr>
+    <td >Pickme Cars Lts<br><small><img src="./assets/images/3star.PNG">( 13 Reviews )</small> </td>
+    <td >£67</td>
+  </tr>
+         <tr>
+    <td >Stanley Cars Lts<br><small><img src="./assets/images/3star.PNG">( 13 Reviews )</small> </td>
+    <td >£67</td>
+  </tr>
+         <tr>
+    <td >Atlas Cars Lts<br><small><img src="./assets/images/4star.PNG">( 13 Reviews )</small> </td>
+    <td >£67</td>
+  </tr>
+</table>
     </div>
     <div id="menu2" class="tab-pane fade">
       <h3>Menu 2</h3>
@@ -80,7 +144,7 @@
 <div class="col-md-5 col-sm-6 nopadding">
 <div id="map"></div>
 </div>
-</div></div>    </div>
+        </div></div>  <br><br>  </div>
     <!--Discount-->	
 <footer class="footer">
 <div class="container">
@@ -149,7 +213,11 @@
     <footer class="footmain">
    <center> <p>Copyrights &copy 2019 Birmingham Airport Taxis.<span class="hidden-xs"> All Rights Reserved</span></p></center>
         </footer>
-
+<script>
+$(document).ready(function(){
+  $('[data-toggle="tooltip"]').tooltip();   
+});
+</script>
 <script>
 
       function initMap() {

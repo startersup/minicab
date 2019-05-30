@@ -123,11 +123,12 @@ width:100%;
     width:100%;
 }
 #map {
-    min-height: 600px;
-    height: auto;
+   min-height: 715px;
+    height: 100%;
     position: fixed;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
+
 .medium
 {
     max-width:500px;
@@ -442,7 +443,16 @@ background-color:#0b0b0f;
 {
     padding:5px;
    font-family: 'ProximaNovaRgRegular';
-    font-size:20px;
+    font-size:18px;
+}
+.footmain h5
+{
+    font-size:16px;
+    font-family: 'ProximaNovaRgRegular';
+}
+.footmain h5 span
+{
+    color:#87C26C;
 }
 .footer h5
 {
@@ -455,7 +465,7 @@ background-color:#0b0b0f;
 .footer p
 {
   font-family: 'ProximaNovaSemibold';
-font-size:20px !important;
+font-size:16px !important;
 letter-spacing:0.4px;
 font-weight:400;
 line-height:30px !important;  
@@ -483,9 +493,10 @@ line-height:30px !important;
 {
  font-family: 'ProximaNovaSemibold';
 font-weight:700;
-background-color:#e2e2e2;
-padding:5px 20px;
-font-size: 17px;
+background-color:#000000;
+    color:#ffffff;
+padding:10px 20px;
+font-size: 20px;
 }
 .fare>tbody>tr>td
 {
@@ -494,24 +505,28 @@ padding:15px 20px;
 }
 .fare>tbody>tr>th:hover
 {
-background-color:#e2e2e2;
-color:#000000 !important;
+background-color:#000000;
+color:#ffffff !important;
 }
 .fare>tbody>tr:hover
 {
-background-color:#50c950;
-    color:#ffffff;
-    font-weight:600;
+background-color:#F2F2F2;
+    color:#000000;
+    font-weight:500;
   transition: 0.3s;
 cursor:pointer;
 }
 .fare td:first-child {
     margin-top: 20px;
 }
-.fare td {
+.fare td, .fare th {
     padding: 15px 5px;
-    font-size: 16px;
-  font-family: 'ProximaNovaRgRegular';
+    font-size: 18px;
+  font-family: 'ProximaNovaSemibold';
+}
+.quote
+{
+    min-height: 715px;
 }
 .quote h1 {
     font-size: 32px;
@@ -557,4 +572,57 @@ font-family: 'ProximaNovaSemibold';
 .nav>li>a:focus, .nav>li>a:hover {
     text-decoration: none;
     background-color: transparent !important;
+}
+.bookit {
+    padding-top: 20px;
+    min-height: 100vh;
+}
+.quoter {
+    width: 100%;
+    padding: 10px 20px;
+    background-color: #F6F6F6;
+}
+.textarea {
+    width: 100%;
+    padding: 12px 20px;
+    min-height: 45px;
+    margin: 8px 0;
+    min-height: 100px;
+    color: #000000;
+    box-sizing: border-box;
+    background-color: #E2E2E2;
+    font-family: 'Poppins', sans-serif;
+}
+.bookit h3 {
+  font-size: 30px;
+    text-align: center;
+    letter-spacing: 0.4px;
+    font-weight: 600;
+    line-height: 40px !important;
+}
+.infotab label {
+    font-size: 18px;
+    font-weight: 600;
+ font-family: 'ProximaNovaSemibold';
+}
+label {
+    display: inline-block;
+    max-width: 100%;
+    margin-bottom: 5px;
+    font-weight: 700;
+}
+.infotab table td:first-child {
+    font-weight: 700;
+     font-family: 'ProximaNovaSemibold';
+}
+.infotab table td {
+    padding: 8px;
+    font-size: 16px;
+    font-weight: 500;
+   font-family: 'ProximaNovaRgRegular';
+}
+.quoter p {
+    font-size: 16px;
+    line-height: 25px;
+     font-family: 'ProximaNovaRgRegular';
 }

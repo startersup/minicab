@@ -21,7 +21,7 @@ width:100%;
 .nav-pills>li>a {
     position: relative;
     display: block;
-    padding: 10px 20px !important;
+    padding: 10px 12px !important;
 }
     .booksec
     {
@@ -87,7 +87,7 @@ width:100%;
 }
 .smallimg
 {
-max-width:50px !important;
+max-width:65px !important;
 width:100%;
 }
     .medium
@@ -98,15 +98,48 @@ width:100%;
     {
         margin-top:30px;
     }
-   .fare td {
+   .fare>tbody>tr>th
+{
+ font-family: 'ProximaNovaSemibold';
+font-weight:700;
+background-color:#000000;
+    color:#ffffff;
+padding:10px 20px;
+font-size: 20px;
+}
+.fare>tbody>tr>td
+{
+margin:2px;
+padding:15px 20px;
+}
+.fare>tbody>tr>th:hover
+{
+background-color:#000000;
+color:#ffffff !important;
+}
+.fare>tbody>tr:hover
+{
+background-color:#F2F2F2;
+    color:#000000;
+    font-weight:500;
+  transition: 0.3s;
+cursor:pointer;
+}
+.fare td:first-child {
+    margin-top: 20px;
+}
+.fare td, .fare th {
     padding: 15px 5px;
-    font-size: 12px;
-    font-family: 'ProximaNovaRgRegular';
+    font-size: 18px;
+  font-family: 'ProximaNovaSemibold';
 }
 .discount small {
-    font-size: 11px;
+    font-size: 15px;
     font-family: 'ProximaNovaRgRegular';
     font-weight: 500;
+}
+    .discount {
+    padding-top: 23px !important;
 }
 }
 @media screen and (max-width: 768px) and (min-width: 600px)
@@ -124,7 +157,7 @@ width:100%;
 .nav-pills>li>a {
     position: relative;
     display: block;
-    padding: 10px 15px !important;
+    padding: 10px 10px !important;
 }
     .booksec h1 {
     margin-top: -10px;
