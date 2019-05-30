@@ -1,0 +1,165 @@
+/*project :Birmingham Airport Taxis*/
+/*Author :Saicharan */
+
+@media screen and (max-width: 600px)
+{
+.navbar-default .navbar-collapse, .navbar-default .navbar-form {
+    border-bottom: none; 
+    background-color:#ffffff;
+}
+    .small
+    {
+        margin-top:-20px;
+        max-width:150px;
+        width:100%;
+    }
+.smallimg
+{
+max-width:50px !important;
+width:100%;
+}
+.nav-pills>li>a {
+    position: relative;
+    display: block;
+    padding: 10px 20px !important;
+}
+    .booksec
+    {
+       padding-top: 60px; 
+    }
+    .booksec h1 {
+    font-size: 28px;
+    line-height: 46px;
+    letter-spacing: 0.5px;
+    color:#ffffff;
+    font-family: 'ProximaNovaSemibold';
+}
+    .why h1, .discount h1 {
+    margin-top: -10px;
+    font-family: 'ProximaNovaBold';
+    /* text-shadow: 0 0 5px rgba(0,0,0,1); */
+    color: #000000;
+    font-size: 32px;
+    text-align: center;
+    line-height: 70px;
+}
+    .feature h2 {
+    font-family: 'ProximaNovaBold';
+    /* text-shadow: 0 0 5px rgba(0,0,0,1); */
+    color: #000000;
+    font-size: 28px;
+    text-align: left;
+    line-height: 50px;
+}
+    .why h4, .discount h4 {
+    font-size: 24px;
+    font-family: 'ProximaNovaBold';
+    font-weight: 500;
+    color: #000000;
+    letter-spacing: 0.8px;
+    line-height: 40px;
+    text-align: center;
+}
+    .white
+    {
+        margin-top:20px;
+    }
+     .booksec p
+{
+    font-size:16px;
+ font-family: 'ProximaNovaRgRegular';
+    font-weight:500;
+    color:#ffffff;
+    letter-spacing:0.8px;
+    line-height:40px;
+    text-align:center;
+}
+    .highlight
+{
+    padding:10px 5px; 
+    font-size:13px;
+    opacity:0.9;
+  border-left:8px solid #87c242;
+ font-family: 'ProximaNovaRgRegular';
+    font-weight:500;
+    color:#000000;
+    background-color: #ffffff;
+}
+.smallimg
+{
+max-width:50px !important;
+width:100%;
+}
+    .medium
+    {
+        margin-top:30px;
+    }
+    .footer
+    {
+        margin-top:30px;
+    }
+   .fare td {
+    padding: 15px 5px;
+    font-size: 12px;
+    font-family: 'ProximaNovaRgRegular';
+}
+.discount small {
+    font-size: 11px;
+    font-family: 'ProximaNovaRgRegular';
+    font-weight: 500;
+}
+}
+@media screen and (max-width: 768px) and (min-width: 600px)
+{
+    .booksec
+    {
+       padding-top: 90px; 
+        min-height:50px;
+    } 
+.smallimg
+{
+max-width:50px !important;
+width:100%;
+}
+.nav-pills>li>a {
+    position: relative;
+    display: block;
+    padding: 10px 15px !important;
+}
+    .booksec h1 {
+    margin-top: -10px;
+    font-size: 30px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-align: center;
+    margin-bottom: 10px;
+    line-height: 50px;
+    position: relative;
+    z-index: 5;
+    color: #ffffff;
+  font-family: 'ProximaNovaSemibold';
+}
+    .booksec p
+{
+    font-size:22px;
+ font-family: 'ProximaNovaRgRegular';
+    font-weight:500;
+    color:#ffffff;
+    letter-spacing:0.8px;
+    line-height:40px;
+    text-align:center;
+}
+.highlight
+{
+    padding:10px;
+    font-size:20px;
+    opacity:0.9;
+  border-left:8px solid #87c242;
+ font-family: 'ProximaNovaRgRegular';
+    font-weight:500;
+    color:#000000 !important;
+    background-color: #ffffff;
+}
+
+}
+

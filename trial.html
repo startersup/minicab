@@ -1,0 +1,335 @@
+    <?php
+
+session_start();
+
+include("connect.php");
+if(!$conn)
+{
+    echo("Server Connection failed");
+    
+}
+
+else
+{
+    
+   // $src="dsdg"; 
+    if (isset($_REQUEST['start'])&&isset($_REQUEST['end'])&&isset($_REQUEST['via'])&& isset($_REQUEST['dt'])&& isset($_REQUEST['pt'])&& isset($_REQUEST['np'])&& isset($_REQUEST['nl'])&& isset($_REQUEST['type'])&& isset($_REQUEST['time'])&& isset($_REQUEST['agency'])&& isset($_REQUEST['fare'])&& isset($_REQUEST['dist'])) 
+    {
+    $src = $_REQUEST['start'];
+    $des = $_REQUEST['end']; 
+    $dt= $_REQUEST['dt']; 
+     $pt= $_REQUEST['pt']; 
+     $np = $_REQUEST['np']; 
+        $nl=$_REQUEST['nl']; 
+         $type=$_REQUEST['type']; 
+        $time=$_REQUEST['time'];
+       $agency= $_REQUEST['agency'];
+         $fare=$_REQUEST['fare'];
+       $dist=$_REQUEST['dist'];
+        $via=$_REQUEST['via'];
+    }
+    
+    
+     $apply=$_REQUEST['promo'];
+    
+    if($via=="")
+    {
+        $via="N/A";
+    }
+    
+    
+$rdate=$_SESSION["rdate"];
+$rptime=$_SESSION["rtime"];
+
+$rnp=$_SESSION["rnp"];
+$rnl=$_SESSION["rnl"];
+
+  // echo($src);echo($des);echo($dt);echo($np);echo($nl);echo($type);echo($time);echo($src);echo($agency);
+   //echo($via);
+ 
+ $cc=" ";
+   
+ ?>  
+ 
+    
+ <html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title><?php echo($head);  ?> | Book Online </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="icon" href="images/taxi.png" type="icon">
+     <meta name="google-site-verification" content="BuTNTdTIkpedUNL6tZTmoXEXEPYQ2m_ThgRGqZumYtM" />
+     <meta name="msvalidate.01" content="15C94257F5DFF7C78D7C62B825CB95A2" />
+ <link rel="stylesheet" href="./css/style.css">
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.4/jquery.datetimepicker.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.4/build/jquery.datetimepicker.full.min.js"></script>
+ <!--google analytics--->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-114368179-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-114368179-1');
+</script>
+ <!--google analytics--->
+</head>
+    <body class="body-top-padding" style="overflow: auto;">
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+<a class="navbar-brand">Britannia <span>Cars</span></a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li><a href="#">Home</a></li>
+       <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="true">Services <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Airport Transfers</a></li>
+            <li><a href="#">Train Station Transfers</a></li>
+              <li><a href="#">Cruise Station Transfers</a></li>
+              <li><a href="#">School Transfers</a></li>
+              <li><a href="#">Corporate Bookings</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Airports</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#"> Signup</a></li>
+        <li><a href="#"> Login</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+ <!--mainsection-->
+ <div class="info container booksec">
+        <div class="row">
+            <div class="col-md-7">
+                   <div class="quoter backcolor"> <h3 class="text-secondary">Journey Information</h3></div>
+                   <div class="quoter infotab">
+                       <div class="row">
+               <div class="col-md-6 ">
+                   <label>Passenger Name:</label>
+                   <input type="text" class="controls" placeholder="Enter Passenger Name">
+                       </div>
+                               <div class="col-md-6">
+                   <label >Passenger  Email:</label>
+                   <input type="text" class="controls"  placeholder="Enter Passenger Email" >
+                       </div></div> 
+                        <div class="row">
+                             <div class="col-md-6 ">
+                   <label >Contact Number:</label>
+                   <input type="text" class="controls" placeholder="Enter Passenger Contact" value="+44">
+                       </div>
+                            <div class="col-md-6 ">
+                   <label >Alternate Number:</label>
+                   <input type="text" class="controls"  placeholder="Enter Alternate Contact" value="+44">
+                            </div></div>
+                           <div class="row">
+                             <div class="col-md-6">
+                   <label >Pickup Full Address:</label>
+                   <input type="text" class="controls"  placeholder="Eg:Building Number, Flat No"  >
+                       </div>
+                            <div class="col-md-6">
+                   <label >Dropoff Full Address:</label>
+                   <input type="text" class="controls" placeholder="Eg:Building Number, Flat No" >
+                            </div></div>
+                           <div class="row">
+                             <div class="col-md-6 ">
+                   <label >Flight Details:</label>
+                   <input type="text" class="controls"  placeholder="Eg: B789" >
+                       </div>
+                            <div class="col-md-6 ">
+                   <label >Payment Mode:</label>
+             <select class="select selectit controls" >
+               <option value="1">Debit / Credit Card (3% Admin Charges)</option>
+               <option value="2">Paypal Transaction(5% Card Charges)</option>
+               <option value="3">Cash on Ride (Deposit Required)</option>
+             </select>
+                            </div></div>
+                             <div class="row">
+                             <div class="col-md-6">
+                   <label >Meet & Greet(£10.00):</label>
+                   <select  class="select selectit controls">
+               <option value="1">No I don't Need </option>
+               <option value="2">Yes I Need Meet & Greet.</option>
+             </select>
+                       </div>
+                            <div class="col-md-6 ">
+                   <label >Child Seat(£5.00 each):</label>
+                   <select  class="select selectit controls">
+               <option value="1">No I don't Need </option>
+               <option value="2">Yes I Need Meet & Greet.</option>
+             </select>
+                            </div></div>
+                                 <div class="row">
+                                       <div class="col-md-12"><br>
+                                 <label >Special information to us (optional):</label>
+                                   <textarea class="select controls textarea" rows="8" id="comment"></textarea>
+                                     </div></div>
+                           <div class="row container1 ">
+                             <div class="col-md-8 col-xs-7">
+      <input id="origin-input" class="controls left" type="text" placeholder="Enter Promocode" name="open" required=""></div>
+                             <div class="col-md-4 col-xs-5"> <button class="buttonquote">Apply <i class="fa fa-chevron-right hiiden-sm hidden-xs"></i></button></div>
+      </div>
+                      <div class="checkbox">
+             <label><input type="checkbox" value=""> I Agree the <a href="index.html">Terms and Conditions</a> mentioned </label>
+           </div><br>
+                    <center> <button class="buttonquote">Book it Now</button></center>   
+        
+
+            </div>
+        </div>
+        <div class="col-md-5">
+               <div class="quoter backcolor"><h3 class="text-secondary">Details Provided</h3></div>
+                    <div class="quoter infotab">
+                   <table>
+         <tr>
+           <td>Pickup From:</td>
+           <td>Gatwick Airport North Terminal Approach </td>
+         </tr>
+         <tr>
+           <td>Dropoff To:</td>
+           <td>Heathrow Airport Terminal 5</td>
+         </tr>
+         <tr>
+           <td>Passengers:</td>
+           <td>1</td>
+         </tr>
+         <tr>
+           <td>Luggages:</td>
+           <td>1</td>
+         </tr>
+           <tr>
+           <td>Cab Type:</td>
+           <td>Saloon x 1</td>
+         </tr>            
+         <tr>
+           <td>Date & Time:</td>
+           <td>11/10/2018 12:30</td>
+         </tr>
+         <tr>
+           <td>Total Fare:</td>
+           <td>£50.00</td>
+         </tr>
+       </table>                
+             </div>
+             <div class="quoter backcolor"><h3 class="text-secondary">Booking Note</h3></div>
+             <div class="quoter infotab">
+                 <ul>
+                <li> <p>All Bookings made in the website needs further confirmation through email by <b>tapping the button </b>on your booking information Email, which will be automatically sent when you booked a Cab.</p></li>
+                <li> <p> Bookings made with Cash on Ride requires <b>minimum 10% Deposit </b>as the booking confirmation fails to pay deposit leads to cancellation of booking.</p></li>
+                <li> <p> In case of any cancellation of the booking should be made<b> before 24 hours of the journey </b>fails to do leads to Admin charges and refund the Balance ( applicable for paid Bookings).
+                    </p></li></ul>
+             </div>
+             <div class="quoter backcolor"><h3 class="text-secondary">Need any help?</h3></div>
+             <div class="quoter infotab">
+                   <ul>
+                           <li> <p><b>For Bookings: </b>+44 01293344804</p></li>
+                           <li> <p><b>For instant Reply:</b> Initiate Live Chat</p></li>
+                           <li> <p><b>For Complaints:</b> complaints@minicabee.co.uk</p></li>
+                 </ul>
+             </div>
+               </div>
+          
+               </div>
+        <br><br>
+        </div>
+ <!--mainsection-->
+
+
+       <!--/header-->
+
+  <style>
+.booksec {
+    padding-top: 90px;
+    min-height: 100vh;
+}
+.quoter {
+    width: 100%;
+    padding: 10px 20px;
+    background-color: #F6F6F6;
+}
+      .infotab label {
+    font-size: 16px;
+    font-weight: 600;
+  font-family: 'Lato', sans-serif !important;
+}
+      .infotab table td:first-child {
+    font-weight: 700;
+}
+.infotab table td {
+    padding: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    font-family: 'Lato', sans-serif !important;
+}
+label {
+    display: inline-block;
+    max-width: 100%;
+    margin-bottom: 5px;
+    font-weight: 700;
+}
+    .booksec h3 {
+   font-family: 'Lato', sans-serif !important;
+    font-size: 26px;
+    text-align: center;
+    letter-spacing: 0.4px;
+    font-weight: 600;
+    line-height: 40px !important;
+}
+.textarea {
+    width: 100%;
+    padding: 12px 20px;
+    min-height: 45px;
+    margin: 8px 0;
+    min-height: 100px;
+    color: #000000;
+    box-sizing: border-box;
+    background-color: #E2E2E2;
+   font-family: 'Lato', sans-serif !important;
+}
+      .selectit {
+    width: 100%;
+    min-height: 45px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+  font-family: 'Lato', sans-serif !important;
+    background-color: #E2E2E2;
+}
+    </style>
+     
+     
+               <!--Start of Tawk.to Script-->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/59ee39974854b82732ff73cd/default';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script-->   
+        </body></html>
+<?php
+
+}
+
+?>
