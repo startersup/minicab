@@ -12,7 +12,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet" />
 </head>
-    <body>
+    <body onload="tooltip();">
 <nav class="navbar navbar-default navbar-fixed-top">
   <div class="container">
     <div class="navbar-header">
@@ -54,13 +54,13 @@
     <h1>Fare Estimator</h1>
     <br>
 <ul class="nav nav-pills">
-    <li><a data-toggle="pill" href="#home"><img data-toggle="tooltip" title="saloon car" class="smallimg" src="./assets/images/saloon.png"></a></li>
-    <li><a data-toggle="pill" href="#menu1"><img data-toggle="tooltip" title="Estate Car" class="smallimg" src="./assets/images/estate.png"></a></li>
-    <li><a data-toggle="pill" href="#menu2"><img data-toggle="tooltip" title="MPV Car" class="smallimg" src="./assets/images/suv.png"></a></li>
-    <li><a data-toggle="pill" href="#menu3"><img data-toggle="tooltip" title="7-9 Seater" class="smallimg" src="./assets/images/mpv.png"></a></li>
+    <li class="active"><a data-toggle="pill" href="#home"><img  data-toggle="tooltip"  title="saloon car" class="smallimg tool_tip" src="./assets/images/saloon.png"><br><center>Saloon</center></a></li>
+    <li><a data-toggle="pill"  href="#menu1"><img  data-toggle="tooltip" title="Estate Car" class="smallimg" src="./assets/images/estate.png"><br><center>Estate</center></a></li>
+    <li><a data-toggle="pill" href="#menu2"><img  data-toggle="tooltip" title="MPV Car" class="smallimg" src="./assets/images/suv.png"><br><center>MPV</center></a></li>
+    <li><a data-toggle="pill" href="#menu3"><img  data-toggle="tooltip" title="7-9 Seater" class="smallimg" src="./assets/images/mpv.png"><br><center>Minibus</center></a></li>
   </ul>
  <div class="tab-content">
-    <div id="home" class="tab-pane fade in active">
+    <div id="home" class="tab-pane fade in active" >
    <table style="width:100%" class="fare">
   <tr>
     <th style="width:80%">Taxi Provider List</th>
@@ -213,11 +213,15 @@
     <footer class="footmain">
    <center> <p>Copyrights &copy 2019 Birmingham Airport Taxis.<span class="hidden-xs"> All Rights Reserved</span></p></center>
         </footer>
-<script>
+
+       <script>
 $(document).ready(function(){
   $('[data-toggle="tooltip"]').tooltip();   
 });
 </script>
+
+
+      
 <script>
 
       function initMap() {

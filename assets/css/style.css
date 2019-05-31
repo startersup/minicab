@@ -562,8 +562,35 @@ cursor:pointer;
 {color:orange;
 }
 .nav-pills>li.active>a, .nav-pills>li.active>a:focus, .nav-pills>li.active>a:hover {
-    color: #fff;
+    color: #EA4335 !important;
     background-color: transparent !important;
+}
+.nav-pills>li>a
+{
+    color:#000000;
+    font-size:16px;
+     font-family: 'ProximaNovaSemibold';
+}
+.nav-pills>li>a:active
+{
+     color: #EA4335 !important;
+}
+.buttonprice {
+    border: none;
+    color: white;
+    padding: 4px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    background-color: #87c26c;
+    font-size: 20px;
+    margin-top: -15px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    cursor: pointer;
+    letter-spacing: 0.5px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    font-family: 'ProximaNovaSemibold';
 }
 .tab-content h3
 {
